@@ -54,13 +54,23 @@ h3 {
   line-height: 3rem;
 }
 /* main  */
-.presentacion {
-  width: 100%;
-  height: calc(100vh - 105.33px);
-  background-image: url(../img/banner-cambio.jpg);
+/* .presentacion */
+.presentacion_img {
+  margin: 0 auto;
+  width: 90%;
+  height: 250px;
+  background-image: url(../img/banner-cambios.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-size: 100%;
+  border-radius: 50px 50px 0 0;
+}
+.presentacion_gif {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.presentacion_gif-item {
+  width: 100px;
 }
 .mapaDePropiedades {
   width: 100%;
@@ -197,4 +207,53 @@ h3 {
   padding: 1rem 2rem;
   background-color: #20b9fc;
   border-radius: 5px;
+}
+/* contacto  */
+.form {
+  width: 300px;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.form-titulo {
+  text-align: center;
+  color: var(--CNegro);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  text-align: start;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form textarea {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e5e5e5;
+}
+
+.form textarea {
+  height: 120px;
+}
+
+.form button[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
