@@ -24,7 +24,7 @@ html {
   margin: 0;
 }
 body {
-  font-size: 16px;
+  font-size: 1.5rem;
   text-align: center;
   font-family: var(--Fgeneral);
 }
@@ -63,6 +63,8 @@ h4 {
   padding: 0.3rem;
   color: var(--CNegro);
   font-size: 2.5rem;
+  font-size: 5.2vw;
+
   line-height: 3rem;
 }
 /* main  */
@@ -95,6 +97,7 @@ h4 {
   border-radius: 10px;
   font-weight: 700;
   padding: 0.5rem;
+  font-size: 10vw;
 }
 .presentacion_text p {
   margin: 1rem 0;
@@ -196,9 +199,10 @@ h4 {
   margin: 1rem 0;
 }
 .btn-filtro {
-  width: 130px;
-  height: 30px;
+  width: 155px;
+  height: 35px;
   margin: 0.5rem;
+  font-size: 5vw;
   text-transform: capitalize;
   font-weight: 500;
   border: none;
@@ -248,6 +252,7 @@ h4 {
   padding: 1rem 0;
   background-color: var(--Cclaro);
   clip-path: polygon(0 0, 100% 0, 95% 51%, 100% 100%, 0 100%, 5% 50%);
+  font-size: 7vw;
 }
 .casa__datos {
   padding: 1.5rem;
