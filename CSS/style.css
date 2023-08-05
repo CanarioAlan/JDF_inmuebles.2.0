@@ -73,21 +73,23 @@ h4 {
   padding: 1rem;
   /* background-color: var(--Coscuro); */
 }
-.presentacion > p {
-  font-size: 2.5rem;
+.presentacion__img-mat p {
+  display: inline-block;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding: 1.5rem 0 1.5rem 1rem;
   font-weight: 700;
   color: var(--Coscuro);
+  background-image: url(../img/logo-cci.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
 }
 .presentacion_img {
+  width: 95vw;
   margin: 0 auto;
-  width: 100%;
-  height: 300px;
-  background-image: url(../img/banner-cambios.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 50px 50px 0 0;
   border: solid 1px var(--Coscuro);
-  background-position: top center;
 }
 .presentacion_text {
   margin: 1.5rem 0;
@@ -121,7 +123,7 @@ h4 {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: capitalize;
-  background-color: var(--Coscuro);
+  background-color: var(--Cclaro);
   border-radius: 1rem 1rem 0 0;
 }
 .mapaDePropiedades-alquileres,
@@ -130,7 +132,7 @@ h4 {
 }
 .mapaDePropiedades-alquileres iframe,
 .mapaDePropiedades-ventas iframe {
-  max-width: 480px;
+  max-width: 768px;
   width: 100%;
   height: 500px;
 }
@@ -155,7 +157,7 @@ h4 {
 }
 .footer__infomarcion-titulo,
 .footer__ubicacion-title {
-  font-size: 2.5rem;
+  font-size: 8vw;
   font-weight: 700;
   padding: 1rem;
   background-color: var(--Cblanco);
@@ -165,14 +167,13 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.5rem;
 }
 .footer__links-info {
   width: 10rem;
   text-decoration: none;
   text-align: end;
   color: var(--CNegro);
-  padding: 0.6rem 2rem;
+  padding: 0.6rem 4rem;
   margin: 0.5rem 0;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -188,7 +189,7 @@ h4 {
   background-image: url(../img/correo-electronico.png);
 }
 .footer__ubicacion-mapa iframe {
-  max-width: 300px;
+  max-width: 768px;
   margin-top: 0.5rem;
 }
 /* alquileres y ventas */
@@ -199,10 +200,10 @@ h4 {
   margin: 1rem 0;
 }
 .btn-filtro {
-  width: 195px;
+  width: 35vw;
   height: 35px;
   margin: 0.5rem;
-  font-size: 5vw;
+  font-size: 4vw;
   text-transform: capitalize;
   font-weight: 500;
   border: none;
@@ -252,7 +253,7 @@ h4 {
   padding: 1rem 0;
   background-color: var(--Cclaro);
   clip-path: polygon(0 0, 100% 0, 95% 51%, 100% 100%, 0 100%, 5% 50%);
-  font-size: 7vw;
+  font-size: 6vw;
 }
 .casa__datos {
   padding: 1.5rem;
@@ -360,6 +361,8 @@ h4 {
   width: calc(100% - 10px);
 }
 .propiedad__descripcion h2 {
+  width: 98%;
+  margin: 0 auto;
   margin-bottom: 1rem;
   text-transform: capitalize;
   border-bottom: solid 1px var(--Coscuro);
@@ -373,6 +376,7 @@ h4 {
   line-height: 1.5;
   font-weight: 400;
   font-family: var(--fgeneral2);
+  border-bottom: 1px solid var(--Coscuro);
 }
 .contacto__propiedades {
   margin: 1rem 0;
@@ -387,4 +391,212 @@ h4 {
   background-size: 2.7rem;
   background-repeat: no-repeat;
   background-position: center left;
+}
+/* Media querys tablet */
+@media (min-width: 481px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  .header_nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .header__link {
+    font-size: 2.5rem;
+  }
+  .presentacion_gif {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+  }
+  .footer__infomarcion-titulo,
+  .footer__ubicacion-title {
+    font-size: 5vw;
+  }
+  .footer__redes__links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer__links-info {
+    width: 8rem;
+  }
+  .footer__ubicacion-mapa iframe {
+    width: 90%;
+    height: 200px;
+  }
+  /* venta y alquileres  */
+  .btn-filtro {
+    width: 15rem;
+    font-size: 2rem;
+  }
+  .casas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .casa {
+    width: 350px;
+  }
+  .casa__titulo {
+    font-size: 2.5rem;
+  }
+  /* contacto  */
+  form {
+    width: 430px;
+    border: 2px double var(--Coscuro);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto 2.5rem;
+  }
+  /* propiedades */
+  .swiper-casa {
+    width: 480px;
+  }
+  .verMas-img {
+    width: 480px;
+  }
+  .propiedad__titulo-descripcion {
+    font-size: 3rem;
+  }
+  .propiedad__texto {
+    margin-bottom: 1rem;
+  }
+}
+/* noteoobk pantallas */
+@media (min-width: 769px) {
+  .presentacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .presentacion__img-mat {
+    grid-column: 2/3;
+  }
+  .presentacion_img {
+    width: 310px;
+    height: 250px;
+  }
+  .presentacion_text {
+    grid-row: 1/2;
+  }
+  .presentacion_text h1 {
+    font-size: 3.5rem;
+  }
+  .mapaDePropiedades {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+  .mapaDePropiedades-ventas,
+  .mapaDePropiedades-alquileres {
+    width: 40%;
+    border: solid 1px var(--Coscuro);
+    border-radius: 1rem;
+  }
+  .mapaDePropiedades-titulo {
+    background-color: var(--Cblanco);
+  }
+  .mapaDePropiedades iframe {
+    width: 90%;
+    height: 250px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-nav {
+    grid-column: 1/3;
+  }
+  .footer__informacion,
+  .footer__ubicacion {
+    background-color: var(--Cblanco);
+  }
+  .footer__infomarcion-titulo,
+  .footer__ubicacion-title {
+    font-size: 2.5rem;
+  }
+  .footer__redes__links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__links-info {
+    margin: 1rem 0;
+  }
+  /* venta y alquiler  */
+  .btn-filtro {
+    font-size: 1.8rem;
+  }
+  .casa {
+    width: 300px;
+  }
+  .casa__titulo {
+    font-size: 2.2rem;
+  }
+  .casa__datos p {
+    font-size: 1.8rem;
+  }
+  /* propiedad  */
+  .swiper-casa {
+    width: 768px;
+  }
+  .items-propiedad {
+    height: 450px;
+  }
+  .verMas-img {
+    width: 768px;
+  }
+  .propiedad__descripcion iframe {
+    width: 90%;
+  }
+}
+/* pantallas grandes  */
+@media (min-width: 1025px) {
+  .header__link {
+    font-size: 3rem;
+  }
+  .presentacion__img-mat {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentacion_img {
+    width: 80%;
+    height: 400px;
+    margin-bottom: 1rem;
+  }
+  .presentacion_text {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .presentacion_text h1 {
+    margin-bottom: 2rem;
+  }
+  .mapaDePropiedades iframe {
+    width: 90%;
+    height: 400px;
+  }
+  /* propiedades  */
+  .swiper-casa {
+    width: 950px;
+  }
+  .verMas-img {
+    width: 950px;
+  }
+  .propiedad__descripcion {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
