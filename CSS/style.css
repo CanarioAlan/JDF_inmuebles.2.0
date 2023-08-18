@@ -210,10 +210,18 @@ h4 {
   background-color: unset;
   background-color: var(--Coscuro);
   border-radius: 5px;
+  color: var(--Cblanco);
 }
 .activado {
-  color: var(--CNegro);
+  color: var(--Cblanco);
   font-weight: 700;
+  scale: 1.1;
+  -webkit-box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
+  -moz-box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
+  box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
+}
+.btn-filtro:hover {
+  cursor: pointer;
 }
 .casas {
   margin: 0 auto;
@@ -250,9 +258,9 @@ h4 {
   font-family: var(--Ftitulo);
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: 1rem 0.2rem;
   background-color: var(--Cclaro);
-  clip-path: polygon(0 0, 100% 0, 95% 51%, 100% 100%, 0 100%, 5% 50%);
+  clip-path: polygon(0 0, 100% 0, 97% 51%, 100% 100%, 0 100%, 3% 50%);
   font-size: 6vw;
 }
 .casa__datos {
@@ -477,6 +485,9 @@ h4 {
 }
 /* noteoobk pantallas */
 @media (min-width: 769px) {
+  .header {
+    justify-content: space-between;
+  }
   .presentacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -544,7 +555,7 @@ h4 {
     width: 300px;
   }
   .casa__titulo {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .casa__datos p {
     font-size: 1.8rem;
@@ -565,6 +576,9 @@ h4 {
 }
 /* pantallas grandes  */
 @media (min-width: 1025px) {
+  .header_nav {
+    width: 700px;
+  }
   .header__link {
     font-size: 3rem;
   }
