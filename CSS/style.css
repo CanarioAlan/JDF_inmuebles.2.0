@@ -277,6 +277,10 @@ h4 {
 .casa__datos-categ {
   padding: 1rem;
 }
+.precio {
+  color: red;
+  font-weight: 900;
+}
 .casa__verMas {
   text-decoration: none;
   font-weight: 700;
