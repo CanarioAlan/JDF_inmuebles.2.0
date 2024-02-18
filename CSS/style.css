@@ -12,6 +12,8 @@
   /* colores de tarjeta */
   --Cclaro: #a0e7d2;
   --Coscuro: #379281;
+  /*color nuevo rojo pared*/
+  --Cbordo: #cc0033;
 }
 /* rem vale a 10px  */
 html {
@@ -44,7 +46,7 @@ h4 {
 }
 /* header  */
 .header {
-  background-color: var(--Cclaro);
+  background-color: var(--Cbordo);
 }
 .header .header__logo {
   width: 12rem;
@@ -59,11 +61,12 @@ h4 {
   margin-left: 3rem;
 }
 .head_mat img {
-  width: 3rem;
+  width: 5rem;
 }
 .head_mat p {
   font-size: 1.5rem;
   font-weight: 500;
+  color: var(--Cblanco);
 }
 .header__cci {
   width: 4rem;
@@ -76,7 +79,7 @@ h4 {
   text-transform: capitalize;
   font-weight: 700;
   padding: 0.3rem;
-  color: var(--CNegro);
+  color: var(--Cblanco);
   font-size: 2.5rem;
   font-size: 5.2vw;
 
@@ -104,17 +107,17 @@ h4 {
   width: 90vw;
   margin: 0 auto;
   border-radius: 50px 50px 0 0;
-  border: solid 1px var(--Coscuro);
+  border: solid 1px var(--Cbordo);
 }
 .presentacion_text {
   margin: 1.5rem 0;
 }
 .presentacion_text h1 {
-  background-color: var(--Cclaro);
   border-radius: 10px;
   font-weight: 700;
   padding: 0.5rem;
   font-size: 8vw;
+  border: solid 1px var(--Cbordo);
 }
 .presentacion_text p {
   margin: 1rem 0;
@@ -139,14 +142,13 @@ h4 {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: capitalize;
-  background-color: var(--Cclaro);
 }
 .mapaDePropiedades iframe {
   width: 99%;
 }
 /* footer */
 .footer {
-  background-color: var(--Cclaro);
+  background-color: var(--Cbordo);
 }
 .footer-nav {
   display: flex;
@@ -157,7 +159,7 @@ h4 {
   text-transform: capitalize;
   font-weight: 400;
   font-size: 2rem;
-  color: var(--CNegro);
+  color: var(--Cblanco);
   padding: 1rem;
 }
 .footer__informacion {
@@ -169,18 +171,19 @@ h4 {
   font-weight: 700;
   padding: 1rem;
   background-color: var(--Cblanco);
-  color: var(--Coscuro);
+  color: var(--Cbordo);
 }
 .footer__redes__links {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--Cblanco);
 }
 .footer__links-info {
   width: 10rem;
   text-decoration: none;
   text-align: end;
-  color: var(--CNegro);
+  color: var(--Cbordo);
   padding: 0.6rem 4rem;
   margin: 0.5rem 0;
   background-repeat: no-repeat;
@@ -195,6 +198,9 @@ h4 {
 }
 .redes__sociales-email {
   background-image: url(../img/correo-electronico.png);
+}
+.footer__ubicacion {
+  background-color: var(--Cblanco);
 }
 .footer__ubicacion-mapa iframe {
   max-width: 768px;
@@ -216,7 +222,7 @@ h4 {
   font-weight: 500;
   border: none;
   background-color: unset;
-  background-color: var(--Coscuro);
+  background-color: var(--Cbordo);
   border-radius: 5px;
   color: var(--Cblanco);
 }
@@ -224,9 +230,7 @@ h4 {
   color: var(--Cblanco);
   font-weight: 700;
   scale: 1.1;
-  -webkit-box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
-  -moz-box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
-  box-shadow: 0px 0px 16px 2px rgba(55, 146, 129, 1);
+  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 1);
 }
 .btn-filtro:hover {
   cursor: pointer;
@@ -238,7 +242,7 @@ h4 {
   width: calc(100% - 20px);
   height: 550px;
   margin: 1rem 0;
-  border: 2px solid var(--Coscuro);
+  border: 2px solid var(--Cbordo);
   border-radius: 10px;
   overflow: hidden;
   margin: 1rem auto;
@@ -248,14 +252,14 @@ h4 {
   height: 200px;
 }
 .swiper-pagination {
-  --swiper-theme-color: var(--Coscuro);
+  --swiper-theme-color: var(--Cbordo);
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--Coscuro);
+  color: var(--Cbordo);
 }
 .swiper-scrollbar {
-  background-color: var(--Coscuro);
+  background-color: var(--Cbordo);
 }
 .casa__informacion {
   padding: 1rem;
@@ -266,10 +270,11 @@ h4 {
   font-family: var(--Ftitulo);
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 0.2rem;
-  background-color: var(--Cclaro);
-  clip-path: polygon(0 0, 100% 0, 97% 51%, 100% 100%, 0 100%, 3% 50%);
+  padding: 1rem 0;
+  border: solid 1px var(--Cbordo);
+  border-radius: 1rem;
   font-size: 6vw;
+  color: var(--Cbordo);
 }
 .casa__datos {
   padding: 1.5rem;
@@ -280,13 +285,12 @@ h4 {
   margin: 1rem 0;
 }
 .casa__datos b {
-  color: var(--Coscuro);
+  font-weight: 700;
 }
 .casa__datos-categ {
   padding: 1rem;
 }
 .precio {
-  color: var(--Coscuro);
   font-weight: 900;
 }
 .casa__verMas {
@@ -294,10 +298,10 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 2.5rem;
-  color: var(--CNegro);
+  color: var(--Cbordo);
   padding: 1rem 2rem;
-  background-color: var(--Cclaro);
   border-radius: 5px;
+  border: solid 1px var(--Cbordo);
 }
 /* contacto  */
 .form {
@@ -308,7 +312,7 @@ h4 {
 .form-titulo {
   font-size: 3.5rem;
   text-align: center;
-  color: var(--CNegro);
+  color: var(--Cbordo);
   padding: 2rem;
 }
 .form-group {
@@ -316,10 +320,11 @@ h4 {
 }
 .form-label {
   display: block;
-  font-weight: 700;
+  font-weight: 400;
   text-align: start;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: var(--Cbordo);
 }
 .form input[type="text"],
 .form input[type="tel"],
@@ -329,15 +334,15 @@ h4 {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: var(--Cclaro);
-  border: solid 1px var(--Coscuro);
+  background-color: var(--CGrisClaro);
+  border: solid 1px var(--Cbordo);
 }
 .form textarea {
   height: 120px;
 }
 .form button[type="submit"] {
   width: 100%;
-  background-color: #4caf50;
+  background-color: var(--Cbordo);
   color: white;
   padding: 15px 20px;
   border: none;
@@ -368,14 +373,14 @@ h4 {
 .verMas-img {
   font-size: 2.5rem;
   margin: 0 auto;
-  background-color: var(--Cclaro);
+  background-color: var(--Cbordo);
   padding: 1rem 0;
   border-radius: 0 0 5px 5px;
 }
 .verMas-img a {
   font-weight: 700;
   text-decoration: none;
-  color: var(--CNegro);
+  color: var(--Cblanco);
 }
 .propiedad__descripcion iframe {
   width: calc(100% - 10px);
@@ -411,6 +416,115 @@ h4 {
   background-size: 2.7rem;
   background-repeat: no-repeat;
   background-position: center left;
+}
+/* nuevas estilos para propiedades  */
+.propiedad__titulo {
+  margin: 1rem 0;
+  border-bottom: solid 2px var(--Coscuro);
+}
+.propiedades-img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  min-width: 320px;
+}
+.img-propiedades {
+  min-width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.img-prop {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.btns {
+  background-color: var(--Cgris);
+  width: 45px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+.btns:hover {
+  scale: 1.1;
+}
+.btn-izq {
+  border-radius: 0 5px 5px 0;
+  left: 0;
+}
+.btn-der {
+  border-radius: 5px 0 0 5px;
+  right: 0;
+}
+.activo {
+  visibility: visible;
+}
+.propiedad-textos {
+  margin: 1rem auto 1rem;
+  width: 90%;
+  height: auto;
+  padding: 1rem;
+  background-color: var(--Cbordo);
+  border-radius: 2rem;
+}
+.propiedad__titulo-descripcion {
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--Cblanco);
+  text-transform: capitalize;
+  color: var(--Cblanco);
+}
+.propiedad__texto-descripcion {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+  line-height: 1.5;
+  color: var(--Cblanco);
+}
+.precios {
+  width: 230px;
+  background-color: var(--Cblanco);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--Cbordo);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.descripcion-Total {
+  text-align: start;
+}
+.descripcion-Total p {
+  line-height: 1.5;
+}
+.contacto__propiedades {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contacto__propiedades a {
+  text-decoration: none;
+  color: var(--Cbordo);
+  background-image: url(../img/logo-whatsapp.webp);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position-y: 15px;
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+
+.propiedad__mapa iframe {
+  width: 90%;
+  height: 350px;
+  border-radius: 10px;
 }
 /* Media querys tablet */
 @media (min-width: 481px) {
@@ -479,7 +593,7 @@ h4 {
   /* contacto  */
   form {
     width: 430px;
-    border: 2px double var(--Coscuro);
+    border: 2px double var(--Cbordo);
     border-radius: 1rem;
     padding: 1rem;
     margin: 0 auto 2.5rem;
@@ -497,8 +611,22 @@ h4 {
   .propiedad__texto {
     margin-bottom: 1rem;
   }
+  .propiedad__titulo {
+    margin: 1rem 0;
+    border-bottom: solid 2px var(--Cbordo);
+  }
+  .propiedades-img {
+    margin: 0 auto;
+    min-width: 460px;
+  }
+  .img-propiedades {
+    width: 500px;
+  }
+  .img-prop {
+    object-fit: contain;
+  }
 }
-/* noteoobk pantallas */
+/* noteoobk pantallas 769px */
 @media (min-width: 769px) {
   .header {
     justify-content: space-between;
@@ -526,7 +654,6 @@ h4 {
     font-size: 3.5rem;
   }
   .mapaDePropiedades {
-    background-color: var(--Cclaro);
     margin-bottom: 1rem;
   }
   .mapaDePropiedades iframe {
@@ -581,6 +708,40 @@ h4 {
   .propiedad__descripcion iframe {
     width: 90%;
   }
+  /* estilos para la nuevas propiedades */
+  .propiedad_contenido {
+    display: flex;
+  }
+  .propiedades-img {
+    width: 520px;
+    height: 480px;
+  }
+  .propiedad-textos {
+    max-width: 220px;
+    height: auto;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 2rem;
+  }
+  .propiedad__titulo-descripcion {
+    margin-bottom: 1rem;
+    border-bottom: solid 1px var(--Cblanco);
+  }
+  .propiedad__texto-descripcion {
+    height: 100%;
+    position: relative;
+  }
+  .precios {
+    width: 210px;
+    border-radius: 5px;
+    padding: 0.3rem;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 40px;
+  }
+  .descripcion-Total {
+    max-width: 780px;
+    margin: 0 auto;
+  }
 }
 /* pantallas grandes  */
 @media (min-width: 1025px) {
@@ -623,5 +784,20 @@ h4 {
   .propiedad__descripcion {
     width: 70%;
     margin: 0 auto;
+  }
+  /* estilos para las nuevas propiedades */
+  .propiedades-img {
+    width: 600px;
+    height: 550px;
+  }
+  .img-propiedades {
+    width: 100%;
+    height: 500px;
+  }
+  .img-prop {
+    object-fit: contain;
+  }
+  .propiedad-textos {
+    max-width: 300px;
   }
 }

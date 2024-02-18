@@ -9,12 +9,11 @@ $(document).ready(function () {
     $(".btn-filtro").removeClass("activado");
     $(this).addClass("activado");
     // OCULTANDO PRODUCTOS =========================
-    $(".casa").hide();
-    // MOSTRANDO PRODUCTOS =========================
-    $('.casa[categoria="' + catProduct + '"]').show();
-  });
-  // MOSTRANDO TODOS LOS PRODUCTOS =======================
-  $('.casa[categoria="todo"]').click(function () {
-    $(".casa").show();
+    if (catProduct === "todo") {
+      $(".casa").show();
+    } else {
+      $(".casa").hide();
+      $('.casa[categoria="' + catProduct + '"]').show();
+    }
   });
 });

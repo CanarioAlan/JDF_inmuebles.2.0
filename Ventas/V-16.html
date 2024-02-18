@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="../CSS/normalice.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../CSS/style.css">
+
 </head>
 
 <body>
     <header class="header">
         <div>
             <img src="../img/Logo-JDF-1.3.png" alt="logo-de-JDF-inmuebles" class="header__logo">
-            <img src="../img/logo-cci.png" alt="Logo-de-cci-santa-fe" class="header__cci">
         </div>
         <nav class="header_nav">
             <a href="../index.html" class="header__link">Inicio</a>
@@ -31,42 +31,58 @@
     <main>
         <section class="propiedad">
             <h1 class="propiedad__titulo">9 de julio 2500</h1>
-            <div class="swiper swiper-casa">
-                <div class="swiper-wrapper">
-                    <img src="img/V16/img1.jpg" class="swiper-slide items-propiedad">
-                    <img src="img/V16/img2.jpg" class="swiper-slide items-propiedad">
-                    <img src="img/V16/img3.jpg" class="swiper-slide items-propiedad">
+            <div class="propiedad_contenido">
+                <div class="propiedades-img">
+                    <img src="../img/flecha-izq.svg" class="btns btn-izq" alt="indicador hacia la izquierda">
+                    <div class="img-propiedades">
+                        <img src="img/V16/img1.jpg" class="img-prop activo" alt="foto de la propiedad">
+                        <img src="img/V16/img2.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img3.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img4.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img5.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img6.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img7.jpg" class="img-prop" alt="foto de la propiedad">
+                        <img src="img/V16/img8.jpg" class="img-prop" alt="foto de la propiedad">
+                    </div>
+                    <img src="../img/flecha-der.svg" class="btns btn-der" alt="indicador hacia la derecha">
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev "></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
+                <div class="propiedad-textos">
+                    <h2 class="propiedad__titulo-descripcion ">descripcion</h2>
+                    <div class="propiedad__texto-descripcion">
+                        <p class="descripcion">
+                            - living comedor con acceso al balcon <br>
+                            - cocina separada <br>
+                            - corredor divisorio <br>
+                            - sanitario de cortesia <br>
+                            - cocina separada <br>
+                            - 2 dormitorios con placar <br>
+                            - habitacion principal con baño en suite <br>
+                            - departamento premiun de 85 m2
+                        </p>
+                        <p class="precios"><span>precio:</span>U$S 110.000</p>
+                    </div>
+                </div>
             </div>
-            <div class="verMas-img">
-                <a href="https://www.facebook.com/JDFinmuebles/posts/pfbid0k6xNtTPPwGZwxokCaVwWa4P4P3f2QihQoRETQyH5iM9rJKNvaeAUvWiKbHekGUn3l"
-                    target="_blank">Ver
-                    mas</a>
+            <section class="descripcion-Total">
+                <p>
+                    Se vende impecable departamento premiun de 85 m2, piso 6 al Fte. en pleno centro de la ciudad - 9 de
+                    julio 2500 Amplio living comedor con acceso al balcon, cocina separada, corredor divisorio,
+                    sanitario de cortesia, 2 dormitorios con placar, habitacion principal con baño en suite. Muy buenas
+                    terminaciones. <b>
+                        U$S 110.000</b>
+                </p>
+            </section>
+            <div class="contacto__propiedades">
+                <a href="https://wa.link/716r9b" class="contacto__wsp">WhatsApp</a>
+                <a href="https://wa.link/yawy7m" class="contacto__wsp">WhatsApp</a>
             </div>
         </section>
-        <section class="propiedad__descripcion">
-            <h2 class="propiedad__titulo-descripcion ">descripcion</h2>
-            <div class="propiedad__texto">
-                <p>Se vende impecable departamento premiun de 85 m2, piso 6 al Fte. en pleno centro de la ciudad - 9 de
-                    julio 2500
-                    Amplio living comedor con acceso al balcon, cocina separada, corredor divisorio, sanitario de
-                    cortesia, 2 dormitorios con placar, habitacion principal con baño en suite.
-                    Muy buenas terminaciones.
-                    <b>U$S 110.000</b>
-                </p>
-            </div>
+        <section class="propiedad__mapa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.583751827827!2d-60.711444923541016!3d-31.645245407353695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5a9babdaddfc1%3A0xd1e8376636cb3959!2s9%20de%20Julio%202500!5e0!3m2!1ses-419!2sar!4v1698541584171!5m2!1ses-419!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="contacto__propiedades">
-                <a href="https://wa.link/yawy7m" class="contacto__wsp">WhatsApp</a>
-                <a href="https://wa.link/716r9b" class="contacto__wsp">WhatsApp</a>
-            </div>
+
         </section>
     </main>
     <footer class="footer">
@@ -100,31 +116,7 @@
 
         </section>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            autoplay: {
-                deley: 2000,
-            },
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-    </script>
+    <script src="../JS/galeria.js"></script>
 </body>
 
 </html>
