@@ -9,10 +9,12 @@
   --Cceleste: #20b9fc;
   --Cazul: #5632fa;
   --CNegro: #000000;
+  --Cverde: #3a9b14;
   /* colores de tarjeta */
   --Cclaro: #a0e7d2;
   --Coscuro: #379281;
   /*color nuevo rojo pared*/
+  --CbordoClaro: #ff0202;
   --Cbordo: #cc0033;
 }
 /* rem vale a 10px  */
@@ -230,7 +232,7 @@ h4 {
   color: var(--Cblanco);
   font-weight: 700;
   scale: 1.1;
-  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 5px 1px rgba(94, 93, 93, 0.5);
 }
 .btn-filtro:hover {
   cursor: pointer;
@@ -350,6 +352,138 @@ h4 {
   cursor: pointer;
   font-weight: 700;
   font-size: 2.5rem;
+}
+/*contacto php*/
+.contacto-main {
+  width: 850px;
+  display: grid;
+  background-color: var(--Cblanco);
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  margin: 60px auto;
+  padding: 1.6rem;
+  border: 1px solid var(--Cbordo);
+  border-radius: 8px;
+  box-shadow: 5px 10px 5px 0px rgba(194, 188, 194, 1);
+}
+.section-formulario {
+  width: 464px;
+  height: 100%;
+  margin: 0 auto;
+}
+.titulo-formulario {
+  color: var(--Cbordo);
+  font-size: 2.5rem;
+}
+.hr-separacion {
+  margin: 1.6rem 0;
+  border: 0.5px solid var(--Cbordo);
+}
+.section-formulario form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  border: none;
+  padding: 0;
+  gap: 2rem;
+}
+.formulario fieldset {
+  border: none;
+  text-align: start;
+  margin: 0px;
+  padding: 0px;
+}
+.formulario label {
+  color: var(--Cblanco);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--Cbordo);
+}
+.formulario input {
+  width: 21rem;
+  height: 2.4rem;
+  border: 1px solid var(--CbordoClaro);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.formulario input:focus,
+textarea {
+  outline: none;
+}
+.formulario .textarea {
+  grid-column: 1 / 3;
+}
+.formulario textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--CbordoClaro);
+  border-radius: 8px;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+.formulario button {
+  grid-column: 2/3;
+  border: none;
+  background-color: var(--Cblanco);
+  border-radius: 8px;
+  color: var(--Cverde);
+  width: 100%;
+  height: 4.5rem;
+  margin: 0 auto;
+}
+
+.separacion-mid {
+  width: 1px;
+  height: 100%;
+}
+.separacion {
+  width: 2px;
+  height: 100%;
+  background-color: var(--Cblanco);
+}
+.informacion {
+  width: 250px;
+  margin: 0 auto;
+}
+.informacion-logo {
+  width: 110px;
+  margin: 1rem 0;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(39%) saturate(6214%)
+    hue-rotate(330deg) brightness(96%) contrast(123%);
+}
+.informacion-texto {
+  font-size: 1.5rem;
+  color: var(--Cblanco);
+  width: 21rem;
+  margin: 1.6rem auto;
+  text-align: start;
+}
+.informacion-titulo-principal {
+  color: var(--Cblanco);
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: start;
+}
+.informacion-hora-subtitulos {
+  margin: 1rem 0 1rem 2rem;
+}
+.informacion-titulo {
+  color: var(--Cblanco);
+  font-weight: 400;
+  text-align: start;
+  font-size: 1.6rem;
+}
+.informacion-horarios {
+  color: var(--Cblanco);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0.5rem auto;
+  text-align: start;
+}
+.informacion-horarios:last-child {
+  text-align: center;
 }
 /* propiedades  */
 .propiedad-main,
