@@ -1,40 +1,37 @@
-<?php 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener los datos del formulario
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $apellido = htmlspecialchars($_POST['apellido']);
+    $telefono = htmlspecialchars($_POST['telefono']);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $mensaje = htmlspecialchars($_POST['mensaje']);
 
-$correo = $_POST['correo'];
-$nombre = $_POST['nombre'];
-$mensaje = $_POST['mensaje'];
+    // Validar campos obligatorios
+    if (!$nombre || !$apellido || !$telefono || !$email || !$mensaje) {
+        echo "Por favor, complete todos los campos correctamente.";
+        exit;
+    }
 
+    // Configuración del correo
+    $to = "info@jdfinmuebles.com"; // Cambiar al correo destino
+    $subject = "Nuevo mensaje desde la web";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-//echo $correo . " " . $nombre . " " . $mensaje;
+    $body = "Nombre: $nombre $apellido\n";
+    $body .= "Teléfono: $telefono\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Mensaje:\n$mensaje\n";
 
-
-$destinatario = "info@jdfinmuebles.com";
-$asunto = "Envio de correo de prueba con PHP"; 
-$cuerpo = '
-    <html> 
-        <head> 
-            <title>Prueba de envio de correo</title> 
-        </head>
-
-        <body> 
-            <h1>Solicitud de contacto desde correo de prueba !  </h1>
-            <p> 
-                Contacto:  '.$nombre . ' - ' . $asunto .'  <br>
-                Mensaje: '.$mensaje.' 
-            </p> 
-        </body>
-    </html>
-';
-//para el envío en formato HTML 
-$headers = "MIME-Version: 1.0\r\n"; 
-$headers .= "Content-type: text/html; charset=UTF8\r\n"; 
-
-//dirección del remitente
-
-$headers .= "FROM: $nombre <$correo>\r\n";
-mail($destinatario,$asunto,$cuerpo,$headers);
-
-echo "Correo enviado"; 
-?> 
-
-<a href="index.html">Volver a inicio</a>
+    // Enviar el correo
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Mensaje enviado con éxito.";
+    } else {
+        echo "Hubo un problema al enviar el mensaje. Inténtelo más tarde.";
+    }
+} else {
+    echo "Acceso no permitido.";
+}
+error_log("Error al enviar correo: " . print_r(error_get_last(), true));
